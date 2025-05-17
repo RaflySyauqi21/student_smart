@@ -10,11 +10,14 @@ class CheckPointPage extends StatefulWidget {
 
 class _CheckPointPageState extends State<CheckPointPage> {
   List<bool> matapelajaran = [false, false, false, false, false];
-  void onchange(bool? value){
-    setState(() {
-      
-    });
-  }
+  List<String> namaMataPelajaran = [
+    'Bahasa Indonesia',
+    'Matematika',
+    'Bahasa Inggris',
+    'Pendidikan Agama',
+    'Seni Budaya',
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -24,14 +27,19 @@ class _CheckPointPageState extends State<CheckPointPage> {
           children: [
             Text("Checkpoint"),
             Expanded(
-              child: ListView(
-                children: [
-                  MataPelajaran(nama: "Bahasa Indonesia", value: matapelajaran[0],ontap: ,),
-                  MataPelajaran(nama: "Matematika"),
-                  MataPelajaran(nama: "Bahasa Inggris"),
-                  MataPelajaran(nama: "Pendidikan Agama"),
-                  MataPelajaran(nama: "Seni Budaya"),
-                ],
+              child: ListView.builder(
+                itemCount: namaMataPelajaran.length,
+                itemBuilder: (BuildContext context, int index) {
+                  return MataPelajaran(
+                    nama: namaMataPelajaran[index],
+                    value: matapelajaran[index],
+                    ontap: (bool? value) {
+                      setState(() {
+                        matapelajaran[index] = !matapelajaran[index];
+                      });
+                    },
+                  );
+                },
               ),
             ),
           ],
