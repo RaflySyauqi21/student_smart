@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:student_smart/pages/bahasa_indonesia_page.dart';
 
 class QuizSelectionpage extends StatefulWidget {
   const QuizSelectionpage({super.key});
@@ -16,6 +17,7 @@ class _QuizSelectionpageState extends State<QuizSelectionpage> {
     'Pendidikan Agama',
     'Seni Budaya',
   ];
+  List<Widget> halamanMataPelajaran = [BahasaIndonesiaPage()];
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -39,18 +41,30 @@ class _QuizSelectionpageState extends State<QuizSelectionpage> {
                 child: ListView.builder(
                   itemCount: namaMataPelajaran.length,
                   itemBuilder: (BuildContext context, int index) {
-                    return Container(
-                      padding: EdgeInsets.symmetric(vertical: 5),
-                      margin: EdgeInsets.symmetric(vertical: 15),
-                      width: 50,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.all(Radius.circular(20)),
-                        color: Color.fromRGBO(93, 169, 217, 1),
-                      ),
-                      child: Text(
-                        namaMataPelajaran[index],
-                        style: TextStyle(fontSize: 24),
-                        textAlign: TextAlign.center,
+                    return GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) {
+                              return halamanMataPelajaran[index];
+                            },
+                          ),
+                        );
+                      },
+                      child: Container(
+                        padding: EdgeInsets.symmetric(vertical: 5),
+                        margin: EdgeInsets.symmetric(vertical: 15),
+                        width: 50,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.all(Radius.circular(20)),
+                          color: Color.fromRGBO(93, 169, 217, 1),
+                        ),
+                        child: Text(
+                          namaMataPelajaran[index],
+                          style: TextStyle(fontSize: 24),
+                          textAlign: TextAlign.center,
+                        ),
                       ),
                     );
                   },
