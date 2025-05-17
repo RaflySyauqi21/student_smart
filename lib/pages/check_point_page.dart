@@ -21,7 +21,7 @@ class _CheckPointPageState extends State<CheckPointPage> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(vertical: 10, horizontal: 5),
+      padding: EdgeInsets.symmetric(vertical: 15, horizontal: 5),
       color: Color.fromRGBO(157, 206, 237, 1),
       child: Center(
         child: Column(
@@ -34,6 +34,7 @@ class _CheckPointPageState extends State<CheckPointPage> {
               ),
               child: Text("Checkpoint", style: TextStyle(fontSize: 25)),
             ),
+            SizedBox(height: 30),
             Expanded(
               child: ListView.builder(
                 itemCount: namaMataPelajaran.length,
