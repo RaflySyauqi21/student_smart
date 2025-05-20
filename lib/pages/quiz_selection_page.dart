@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:student_smart/pages/bahasa_indonesia_page.dart';
+import 'package:student_smart/pages/matematika_page.dart';
 
 class QuizSelectionpage extends StatefulWidget {
   const QuizSelectionpage({super.key});
@@ -17,7 +18,13 @@ class _QuizSelectionpageState extends State<QuizSelectionpage> {
     'Pendidikan Agama',
     'Seni Budaya',
   ];
-  List<Widget> halamanMataPelajaran = [BahasaIndonesiaPage()];
+  List<Widget> halamanMataPelajaran = [
+    BahasaIndonesiaPage(),
+    MatematikaPage(),
+    MatematikaPage(),
+    MatematikaPage(),
+    MatematikaPage(),
+  ];
   @override
   Widget build(BuildContext context) {
     return Container(
