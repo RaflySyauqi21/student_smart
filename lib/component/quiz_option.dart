@@ -29,7 +29,11 @@ class _QuizOptionState extends State<QuizOption> {
           color: isTrue ? widget.color : Colors.white,
           borderRadius: BorderRadius.all(Radius.circular(10)),
         ),
-        child: Text(widget.name, style: TextStyle(fontSize: 20)),
+        child: Text(
+          widget.name,
+          textAlign: TextAlign.center,
+          style: TextStyle(fontSize: 20),
+        ),
       ),
     );
   }

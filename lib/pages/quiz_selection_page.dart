@@ -3,6 +3,7 @@ import 'package:student_smart/pages/bahasa_indonesia_page.dart';
 import 'package:student_smart/pages/bahasa_inggris_page.dart';
 import 'package:student_smart/pages/matematika_page.dart';
 import 'package:student_smart/pages/pendidikan_agama_page.dart';
+import 'package:student_smart/pages/seni_budaya_page.dart';
 
 class QuizSelectionpage extends StatefulWidget {
   const QuizSelectionpage({super.key});
@@ -19,12 +20,14 @@ class _QuizSelectionpageState extends State<QuizSelectionpage> {
     'Bahasa Inggris',
     'Pendidikan Agama',
     'Seni Budaya',
+    'Pendidikan Jasmani',
   ];
   List<Widget> halamanMataPelajaran = [
     BahasaIndonesiaPage(),
     MatematikaPage(),
     BahasaInggrisPage(),
     PendidikanAgamaPage(),
+    SeniBudayaPage(),
     MatematikaPage(),
   ];
   @override
