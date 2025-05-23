@@ -49,15 +49,15 @@ class MatematikaPage extends StatelessWidget {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
-                          QuizOption(name: 'Ribuan'),
-                          QuizOption(name: 'Ratusan'),
+                          QuizOption(name: 'Ribuan', color: Colors.red),
+                          QuizOption(name: 'Ratusan', color: Colors.green),
                         ],
                       ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
-                          QuizOption(name: 'Puluhan'),
-                          QuizOption(name: 'Satuan'),
+                          QuizOption(name: 'Puluhan', color: Colors.red),
+                          QuizOption(name: 'Satuan', color: Colors.red),
                         ],
                       ),
                     ],

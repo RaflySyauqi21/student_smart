@@ -68,8 +68,8 @@ class BahasaIndonesiaPage extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.center,
                             spacing: 150,
                             children: [
-                              QuizOption(name: 'Menari'),
-                              QuizOption(name: 'Toko Buku'),
+                              QuizOption(name: 'Menari', color: Colors.red),
+                              QuizOption(name: 'Toko Buku', color: Colors.green),
                             ],
                           ),
                           SizedBox(height: 20),
@@ -78,8 +78,8 @@ class BahasaIndonesiaPage extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.center,
                             spacing: 150,
                             children: [
-                              QuizOption(name: 'Berjalan'),
-                              QuizOption(name: 'Pagi'),
+                              QuizOption(name: 'Berjalan', color: Colors.red),
+                              QuizOption(name: 'Pagi', color: Colors.red),
                             ],
                           ),
                         ],

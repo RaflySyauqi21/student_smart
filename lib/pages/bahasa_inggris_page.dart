@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:student_smart/component/quiz_option.dart';
 
-class BahasaInggris extends StatelessWidget {
-  const BahasaInggris({super.key});
+class BahasaInggrisPage extends StatelessWidget {
+  const BahasaInggrisPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +30,7 @@ class BahasaInggris extends StatelessWidget {
             ),
             SizedBox(height: 40),
             Container(
-              padding: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+              padding: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
               margin: EdgeInsets.all(30),
               decoration: BoxDecoration(
                 color: Color.fromRGBO(131, 199, 242, 1),
@@ -39,7 +40,7 @@ class BahasaInggris extends StatelessWidget {
                 spacing: 30,
                 children: [
                   Text(
-                    'Angka 2 pada 235 menempati nilai satuan?',
+                    'When does the day start?',
                     style: TextStyle(fontSize: 20),
                   ),
                   Column(
@@ -47,11 +48,23 @@ class BahasaInggris extends StatelessWidget {
                     children: [
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
-                        children: [],
+                        children: [
+                          QuizOption(
+                            name: 'In the morning',
+                            color: Colors.green,
+                          ),
+                          QuizOption(
+                            name: 'In the afternoon',
+                            color: Colors.red,
+                          ),
+                        ],
                       ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
-                        children: [],
+                        children: [
+                          QuizOption(name: 'In the Evening', color: Colors.red),
+                          QuizOption(name: 'In the Night', color: Colors.red),
+                        ],
                       ),
                     ],
                   ),
