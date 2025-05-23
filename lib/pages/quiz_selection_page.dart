@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:student_smart/pages/bahasa_indonesia_page.dart';
 import 'package:student_smart/pages/bahasa_inggris_page.dart';
 import 'package:student_smart/pages/matematika_page.dart';
+import 'package:student_smart/pages/pendidikan_agama_page.dart';
 
 class QuizSelectionpage extends StatefulWidget {
   const QuizSelectionpage({super.key});
@@ -23,7 +24,7 @@ class _QuizSelectionpageState extends State<QuizSelectionpage> {
     BahasaIndonesiaPage(),
     MatematikaPage(),
     BahasaInggrisPage(),
-    MatematikaPage(),
+    PendidikanAgamaPage(),
     MatematikaPage(),
   ];
   @override
